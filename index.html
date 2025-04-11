@@ -11,6 +11,7 @@
       padding: 20px;
       background-color: #f7f7f7;
       color: #333;
+      line-height: 1.6;
     }
     .container {
       max-width: 480px;
@@ -21,8 +22,9 @@
       box-shadow: 0 0 10px rgba(0,0,0,0.1);
     }
     h1 {
-      font-size: 24px;
+      font-size: 28px;
       color: #222;
+      text-align: center;
     }
     h2 {
       font-size: 20px;
@@ -36,10 +38,15 @@
     }
     .contact {
       background-color: #ffcc00;
-      padding: 15px;
+      padding: 40px 15px;
       border-radius: 8px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
       text-align: center;
-      margin-top: 25px;
+      gap: 12px;
+      min-height: 200px;
     }
     .contact a {
       display: block;
@@ -101,33 +108,42 @@
 </head>
 <body>
   <div class="container">
-    <h1>💪 Solo Pro Services</h1>
-    <p><strong>Reliable handyman in Northern New Jersey</strong></p>
-    <h2>🔧 Services:</h2>
+    <h1>Solo Pro Services</h1>
+    <p style="text-align: center;"><strong>Reliable handyman in Northern New Jersey</strong></p>
+
+    <h2>Services:</h2>
     <ul>
       <li>Furniture assembly</li>
       <li>Mounting shelves, curtains, TVs</li>
       <li>Door, cabinet, and lock repair</li>
       <li>Minor home and office repairs</li>
     </ul>
-    <h2>✅ Why choose us:</h2>
+
+    <h2>Why choose us:</h2>
     <ul>
       <li>Always on time</li>
       <li>Done right the first time</li>
       <li>Fully equipped</li>
       <li>650+ completed tasks</li>
       <li>4.9 rating on TaskRabbit</li>
+      <li>Insured with General Liability Insurance</li>
     </ul>
-    <p><strong>📍 Serving:</strong><br />Fort Lee, Englewood, Hackensack, Paramus, and other towns in Bergen County and nearby.</p>
+
+    <p><strong>🔗 Check out my full profile on TaskRabbit for detailed work history, pricing, and 650+ reviews:</strong><br>
+      <a href="https://tr.co/kamil-z" target="_blank">https://tr.co/kamil-z</a></p>
+
+    <p style="font-size: 18px;"><strong>Serving:</strong><br />Fort Lee, Englewood, Hackensack, Paramus, and other towns in Bergen County and nearby.</p>
+
     <div class="contact">
-      <p><strong>📞 Contact us:</strong></p>
+      <p style="font-size: 22px;"><strong>Contact us:</strong></p>
       <a href="tel:+12017237708">Call: +1 (201) 723-7708</a>
       <a href="mailto:soloproservices@gmail.com">Send Email</a>
       <a href="https://wa.me/12017237708" target="_blank">Message on WhatsApp</a>
       <a href="#form">Request a quote</a>
     </div>
+
     <div class="form-section" id="form">
-      <h2>📋 Request a Quote (via WhatsApp)</h2>
+      <h2>Request a Quote (via WhatsApp)</h2>
       <form id="whatsappForm">
         <input type="text" id="name" placeholder="Your Name" required />
         <input type="email" id="email" placeholder="Your Email" required />
@@ -137,39 +153,21 @@
         <div id="confirmation">✅ Your request was prepared for WhatsApp!</div>
       </form>
     </div>
-    <div class="gallery">
-      <h2>🖼️ Our Work</h2>
-      <img src="https://i.imgur.com/WhJIjz0l.jpg" alt="Kitchen Installation 1" />
-      <img src="https://i.imgur.com/wO5x216l.jpg" alt="Kitchen Installation 2" />
-      <img src="https://i.imgur.com/IlOAhFll.jpg" alt="Kitchen Installation 3" />
-      <img src="https://i.imgur.com/96wM5Ril.jpg" alt="Kitchen Installation 4" />
-      <img src="https://i.imgur.com/O4oGjVYl.jpg" alt="Kitchen Installation 5" />
-      <img src="https://i.imgur.com/2Bx2Pd2l.jpg" alt="Kitchen Installation 6" />
-      <img src="https://i.imgur.com/ns2TB3tl.jpg" alt="Kitchen Installation 7" />
-      <img src="https://i.imgur.com/28ghcxRl.jpg" alt="Kitchen Installation 8" />
-      <img src="https://i.imgur.com/f6sbHRSl.jpg" alt="Kitchen Installation 9" />
-      <img src="https://i.imgur.com/2FOMVgAl.jpg" alt="Kitchen Installation 10" />
-      <img src="https://i.imgur.com/1vgS1gsl.jpg" alt="Kitchen Installation 11" />
-      <img src="https://i.imgur.com/ONHp1Lzl.jpg" alt="Kitchen Installation 12" />
-      <img src="https://i.imgur.com/OOldaZzl.jpg" alt="Kitchen Installation 13" />
-      <img src="https://i.imgur.com/wPzkNHKl.jpg" alt="Custom Closet Design 1" />
-      <img src="https://i.imgur.com/zscPUMOl.jpg" alt="Custom Closet Design 2" />
-      <img src="https://i.imgur.com/ilnMRGTl.jpg" alt="Custom Closet Installation 1" />
-      <img src="https://i.imgur.com/UjsrW93l.jpg" alt="Custom Closet Installation 2" />
-      <img src="https://i.imgur.com/Ffuv5Ffl.jpg" alt="Custom Closet Installation 3" />
-      <img src="https://i.imgur.com/kvWK5NHl.jpg" alt="Custom Mudroom Installation" />
-      <img src="https://i.imgur.com/r7qPfQDl.jpg" alt="Attic Storage Space Build" />
-    </div>
+
     <div class="reviews">
       <h2>⭐ Client Reviews</h2>
-      <blockquote>"Fast and professional! My shelves were up in no time." – Maria G.</blockquote>
-      <blockquote>"Came same day and fixed my broken door. Highly recommend." – John D.</blockquote>
+      <blockquote>"Kamil was great! He mounted multiple shelves and a heavy mirror with precision. He was super professional and efficient." – Jessica R.</blockquote>
+      <blockquote>"Very knowledgeable and skilled. Kamil assembled two complex wardrobes and even helped adjust my kitchen doors." – Daniel K.</blockquote>
+      <blockquote>"Punctual, polite and efficient! I will definitely book him again." – Sarah T.</blockquote>
+      <blockquote>"Mounted curtain rods and a TV. Everything is level and solid. Highly recommended!" – Ravi P.</blockquote>
     </div>
+
     <div class="booking">
-      <h2>🗓️ Book a Visit</h2>
+      <h2>Book a Visit</h2>
       <button onclick="window.location.href='tel:+12017237708'">Book Now</button>
     </div>
   </div>
+
   <script>
     document.getElementById("whatsappForm").addEventListener("submit", function(e) {
       e.preventDefault();
