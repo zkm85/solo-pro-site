@@ -1,238 +1,353 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Solo Pro Services | Handyman in Fort Lee NJ</title>
-  <meta name="title" content="Solo Pro Services | Handyman in Fort Lee NJ">
-  <meta name="description" content="Handyman services: assembly, mounting, cabinet and door repairs in Northern New Jersey. 650+ jobs completed. 4.9 stars on TaskRabbit.">
-  <meta name="keywords" content="handyman NJ, Fort Lee furniture assembly, mounting TV Bergen County, cabinet repair, door repair, TaskRabbit handyman">
-  <meta name="robots" content="index, follow">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Solo Pro Services — Cabinets, Trim, Wall Paneling & Custom Installations</title>
+  <meta name="description" content="Solo Pro Services provides cabinetry, closet systems, interior doors, wall paneling, trim work, TV/media walls, furniture assembly, drywall repairs, and small interior painting in Fort Lee, NJ. Licensed • Insured • W9 Provided. Residential & B2B." />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-      margin: 0;
-      padding: 20px;
-      background-color: #f7f7f7;
-      color: #333;
-      line-height: 1.6;
+    :root{
+      --blue:#004A8F; /* brand blue */
+      --orange:#FF7F00; /* accent */
+      --gray-900:#1F2937;
+      --gray-700:#374151;
+      --gray-500:#6B7280;
+      --gray-200:#E5E7EB;
+      --bg:#FFFFFF;
+      --card:#F7F7F8;
+      --radius:14px;
+      --shadow:0 10px 24px rgba(0,0,0,.08);
     }
-    .container {
-      max-width: 480px;
-      margin: auto;
-      background-color: white;
-      padding: 20px;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    *{box-sizing:border-box}
+    html,body{margin:0;font-family:Inter,system-ui,Segoe UI,Roboto,Arial,sans-serif;color:var(--gray-900);background:#fff}
+    .container{max-width:1050px;margin:0 auto;padding:0 20px}
+
+    /* Header */
+    header{position:sticky;top:0;background:#fff;border-bottom:1px solid var(--gray-200);z-index:20}
+    .nav{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
+    .brand{display:flex;gap:10px;align-items:center;font-weight:700;color:var(--blue)}
+    .brand .dot{width:12px;height:12px;border-radius:50%;background:var(--orange)}
+    nav ul{display:flex;gap:22px;list-style:none;margin:0;padding:0}
+    nav a{color:var(--gray-700);text-decoration:none;font-weight:500}
+    nav a:hover{color:var(--blue)}
+    .cta{display:inline-block;background:var(--orange);color:#fff;padding:10px 14px;border-radius:10px;text-decoration:none;font-weight:600}
+
+    .logo img{height:40px;width:auto}
+
+    /* Hero */
+    .hero{background:linear-gradient(90deg, rgba(0,74,143,.07), rgba(255,127,0,.08));}
+    .hero .wrap{display:grid;grid-template-columns:1.2fr .8fr;gap:28px;align-items:center;padding:48px 0}
+    h1{font-size:38px;line-height:1.15;margin:0 0 10px}
+    .subtitle{color:var(--gray-700);font-size:18px}
+    .badges{display:flex;flex-wrap:wrap;gap:10px;margin:16px 0 26px}
+    .badge{background:#fff;border:1px solid var(--gray-200);padding:8px 10px;border-radius:999px;font-size:14px}
+    .hero-card{background:#fff;border:1px solid var(--gray-200);border-radius:var(--radius);padding:18px;box-shadow:var(--shadow)}
+
+    /* Sections */
+    section{padding:48px 0}
+    h2{font-size:26px;margin:0 0 18px}
+    .grid{display:grid;gap:16px}
+    .cols-3{grid-template-columns:repeat(3,1fr)}
+    .cols-2{grid-template-columns:repeat(2,1fr)}
+    .card{background:var(--card);border:1px solid var(--gray-200);border-radius:var(--radius);padding:18px}
+    .list{margin:0;padding:0 0 0 18px}
+    .list li{margin:6px 0}
+
+    /* Portfolio */
+    .gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+    .gallery img{width:100%;height:300px;object-fit:cover;border-radius:12px;border:1px solid var(--gray-200)}
+
+    /* CTA strip */
+    .cta-strip{background:var(--blue);color:#fff;padding:28px 0;text-align:center;border-radius:12px}
+    .cta-strip .cta{background:#fff;color:var(--blue)}
+
+    /* Footer */
+    footer{border-top:1px solid var(--gray-200);padding:28px 0 40px;color:var(--gray-700)}
+    footer a{color:var(--blue);text-decoration:none}
+
+    /* Responsive */
+    @media (max-width:900px){
+      .hero .wrap{grid-template-columns:1fr}
+      .cols-3{grid-template-columns:1fr}
+      .cols-2{grid-template-columns:1fr}
+      .gallery{grid-template-columns:repeat(2,1fr)}
     }
-    h1 {
-      font-size: 28px;
-      color: #222;
-      text-align: center;
-    }
-    h2 {
-      font-size: 20px;
-      margin-top: 20px;
-    }
-    ul {
-      padding-left: 20px;
-    }
-    li {
-      margin-bottom: 10px;
-    }
-    .contact {
-  background-color: #c9b59b;
-  padding: 10px 10px 10px 10px;
-  border-radius: 8px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-  text-align: center;
-  gap: 6px;
-  min-height: 150px;
-  font-size: 14px;
-  margin-bottom: 10px;
-}
-    .contact a {
-  display: block;
-  margin-top: 2px;
-  font-weight: bold;
-  color: #000;
-  text-decoration: none;
-}
-    .form-section, .gallery, .reviews, .booking {
-      margin-top: 30px;
-    }
-    .form-section input, .form-section textarea {
-      width: 100%;
-      padding: 10px;
-      margin: 5px 0;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-    }
-    .form-section button {
-      background-color: #222;
-      color: white;
-      padding: 10px;
-      border: none;
-      border-radius: 5px;
-      width: 100%;
-      cursor: pointer;
-    }
-    .gallery img {
-  width: 100%;
-  max-width: 460px;
-  height: auto;
-  border-radius: 8px;
-  margin-bottom: 10px;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-    .reviews blockquote {
-      background-color: #eee;
-      padding: 10px;
-      border-left: 5px solid #ccc;
-      margin: 10px 0;
-      font-style: italic;
-    }
-    .booking button {
-      background-color: #007bff;
-      color: white;
-      padding: 10px 20px;
-      font-size: 16px;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-      width: 100%;
-    }
-    #confirmation {
-      margin-top: 10px;
-      padding: 10px;
-      border-radius: 5px;
-      background-color: #d4edda;
-      color: #155724;
-      display: none;
-    }
-  </style>
+    @media (max-width:560px){
+    h1{font-size:30px; padding:0 12px;}
+    .subtitle{padding:0 12px;}
+    .cta{margin:12px auto;
+      display:inline-block;
+      padding:8px 12px; 
+      font-size:14px;}
+    .badge{margin:6px; padding:10px 14px;} /* отступы для бейджей */
+    .gallery{grid-template-columns:1fr}
+    nav ul{display:none}
+    .logo img{height:28px; margin-left:10px;} /* уменьшение логотипа на 30% и отступ */
+  }
+</style>
 </head>
 <body>
+  <header>
+    <div class="container nav">
+      <div class="logo">
+        <img src="https://i.imgur.com/2HCkWXy.png" alt="Solo Pro Services Logo">
+      </div>
+      <nav aria-label="Main">
+        <ul>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="#why">Why us</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <a class="cta" href="tel:+12017237708">Call (201) 723‑7708</a>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container wrap">
+      <div>
+        <h1>Cabinetry & Custom Installations</h1>
+        <p class="subtitle">Wall paneling • Trim & moldings • Interior doors • Media walls • Closets & built‑ins</p>
+        <div class="badges">
+          <span class="badge">Licensed & Insured</span>
+          <span class="badge">W9 Provided</span>
+          <span class="badge">Residential & B2B</span>
+          <span class="badge">Fort Lee, NJ</span>
+        </div>
+        <a class="cta" href="https://wa.me/12017237708" target="_blank" rel="noopener">Text on WhatsApp</a>
+        <a class="cta" style="margin-left:10px;background:var(--blue)" href="#contact">Get a Free Estimate</a>
+      </div>
+      <div class="hero-card">
+        <strong>Quick estimate?</strong>
+        <p style="margin:8px 0 12px;color:var(--gray-700)">Send photos and a short description. We’ll reply with options and a ballpark quote.</p>
+        <ul class="list">
+          <li>Reply within 1 business day</li>
+          <li>Clear, itemized pricing</li>
+          <li>Scheduled by appointment</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="services">
+    <div class="container">
+      <h2>Services</h2>
+      <div class="grid cols-3">
+        <div class="card">
+          <h3>Trim & Paneling</h3>
+          <ul class="list">
+            <li>Wall paneling & accent walls</li>
+            <li>Trim, moldings & wainscoting</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Cabinetry & Storage</h3>
+          <ul class="list">
+            <li>Kitchen & vanity cabinet installation</li>
+            <li>Closet systems & built‑ins</li>
+            <li>Custom shelving</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Interior Installations</h3>
+          <ul class="list">
+            <li>Interior doors installation</li>
+            <li>TV mounting & media walls</li>
+            <li>Mirrors, blinds & curtains</li>
+            <li>Wall art & décor</li>
+            <li>Furniture assembly</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Repairs & Painting</h3>
+          <ul class="list">
+            <li>Interior doors & drawers repair</li>
+            <li>Drywall patching & caulking</li>
+            <li>Interior painting (accent walls, touch‑ups)</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Service Area</h3>
+          <ul class="list">
+            <li>Fort Lee, NJ (base)</li>
+            <li>Bergen County (Edgewater, Palisades Park, Hackensack, etc.)</li>
+         </ul>
+        </div>
+        <div class="card">
+          <h3>Why choose us</h3>
+          <ul class="list">
+            <li>12+ years in cabinetry & home installations</li>
+            <li>Trusted by homeowners & small businesses</li>
+            <li>Fast response & clear communication</li>
+            <li>Licensed • Insured • W9 Provided</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+ <section id="portfolio">
   <div class="container">
-    <img src="https://i.imgur.com/ps4Otuq.png" alt="Solo Pro Services Logo" style="display: block; width: 100%; height: auto; border-radius: 8px; margin-bottom: 10px;" />
-    <h2>Services:</h2>
-    <ul>
-      <li>Furniture assembly</li>
-      <li>Mounting shelves, curtains, TVs</li>
-      <li>Door, cabinet, and lock repair</li>
-      <li>Minor home and office repairs</li>
-    </ul>
-
-    <h2>Why choose us:</h2>
-    <ul>
-      <li>Always on time</li>
-      <li>Done right the first time</li>
-      <li>Fully equipped</li>
-      <li>650+ completed tasks</li>
-      <li>4.9 rating on TaskRabbit</li>
-      <li>Insured with General Liability Insurance</li>
-    </ul>
-
-    <p><strong>🔗 Check out my full profile on TaskRabbit for detailed work history, pricing, and 650+ reviews:</strong><br>
-      <a href="https://tr.co/kamil-z" target="_blank">https://tr.co/kamil-z</a></p>
-
-    <p style="font-size: 18px;"><strong>Serving:</strong><br />Fort Lee, Englewood, Hackensack, Paramus, and other towns in Bergen County and nearby.</p>
-
-    <div class="contact">
-      <p style="font-size: 22px; margin: 0 0 2px 0;"><strong>Contact us:</strong></p>
-      <a href="tel:+12017237708">Call: +1 (201) 723-7708</a>
-      <a href="mailto:soloproservices@gmail.com">Send Email</a>
-      <a href="https://wa.me/12017237708" target="_blank">Message on WhatsApp</a>
-      <a href="#form">Request a quote</a>
-    </div>
-
-    <div class="form-section" id="form">
-      <h2>Request a Quote (via WhatsApp)</h2>
-      <form id="whatsappForm">
-        <input type="text" id="name" placeholder="Your Name" required />
-        <input type="email" id="email" placeholder="Your Email" required />
-        <input type="tel" id="phone" placeholder="Phone Number" required />
-        <textarea id="message" rows="4" placeholder="Describe your project"></textarea>
-        <button type="submit">Send via WhatsApp</button>
-        <div id="confirmation">✅ Your request was prepared for WhatsApp!</div>
-      </form>
-    </div>
-
+    <h2>Recent Work</h2>
     <div class="gallery">
-      <h2>Our Work</h2>
-      <img src="https://i.imgur.com/z7Au8ql.jpg" alt="Portfolio 1" />
-      <img src="https://i.imgur.com/uswZ0Qp.jpg" alt="Portfolio 2" />
-      <img src="https://i.imgur.com/Z7wFUoy.jpg" alt="Portfolio 3" />
-      <img src="https://i.imgur.com/Ox6d1bJ.jpg" alt="Portfolio 4" />
-      <img src="https://i.imgur.com/zvo6Xys.jpg" alt="Portfolio 5" />
-      <img src="https://i.imgur.com/WMgmqvT.jpg" alt="Portfolio 6" />
-      <img src="https://i.imgur.com/VxZkunG.jpg" alt="Portfolio 7" />
-      <img src="https://i.imgur.com/RBGaIfL.jpg" alt="Portfolio 8" />
-      <img src="https://i.imgur.com/TeeD4z8.jpg" alt="Portfolio 9" />
-      <img src="https://i.imgur.com/LZBO9Ms.jpg" alt="Portfolio 10" />
-      <img src="https://i.imgur.com/yMMoJ0n.jpg" alt="Portfolio 11" />
-      <img src="https://i.imgur.com/il1VMAz.jpg" alt="Portfolio 12" />
-      <img src="https://i.imgur.com/xBBDZNk.jpg" alt="Portfolio 13" />
-      <img src="https://i.imgur.com/vrOzMXU.jpg" alt="Portfolio 14" />
-      <img src="https://i.imgur.com/Ks4b8gy.jpg" alt="Portfolio 15" />
-      <img src="https://i.imgur.com/11Z8rCT.jpg" alt="Portfolio 16" />
-      <img src="https://i.imgur.com/VNl5oPV.jpg" alt="Portfolio 17" />
-      <img src="https://i.imgur.com/Y7yAdey.jpg" alt="Portfolio 18" />
-      <img src="https://i.imgur.com/WhJIjz0l.jpg" alt="Kitchen Installation 1" />
-      <img src="https://i.imgur.com/wO5x216l.jpg" alt="Kitchen Installation 2" />
-      <img src="https://i.imgur.com/IlOAhFll.jpg" alt="Kitchen Installation 3" />
-      <img src="https://i.imgur.com/96wM5Ril.jpg" alt="Kitchen Installation 4" />
-      <img src="https://i.imgur.com/O4oGjVYl.jpg" alt="Kitchen Installation 5" />
-      <img src="https://i.imgur.com/2Bx2Pd2l.jpg" alt="Kitchen Installation 6" />
-      <img src="https://i.imgur.com/ns2TB3tl.jpg" alt="Kitchen Installation 7" />
-      <img src="https://i.imgur.com/28ghcxRl.jpg" alt="Kitchen Installation 8" />
-      <img src="https://i.imgur.com/f6sbHRSl.jpg" alt="Kitchen Installation 9" />
-      <img src="https://i.imgur.com/2FOMVgAl.jpg" alt="Kitchen Installation 10" />
-      <img src="https://i.imgur.com/1vgS1gsl.jpg" alt="Kitchen Installation 11" />
-      <img src="https://i.imgur.com/ONHp1Lzl.jpg" alt="Kitchen Installation 12" />
-      <img src="https://i.imgur.com/OOldaZzl.jpg" alt="Kitchen Installation 13" />
-      <img src="https://i.imgur.com/wPzkNHKl.jpg" alt="Custom Closet Design 1" />
-      <img src="https://i.imgur.com/zscPUMOl.jpg" alt="Custom Closet Design 2" />
-      <img src="https://i.imgur.com/ilnMRGTl.jpg" alt="Custom Closet Installation 1" />
-      <img src="https://i.imgur.com/UjsrW93l.jpg" alt="Custom Closet Installation 2" />
-      <img src="https://i.imgur.com/Ffuv5Ffl.jpg" alt="Custom Closet Installation 3" />
-      <img src="https://i.imgur.com/kvWK5NHl.jpg" alt="Custom Mudroom Installation" />
-      <img src="https://i.imgur.com/r7qPfQDl.jpg" alt="Attic Storage Space Build" />
-    </div>
-
-    <div class="reviews">
-  <h2>⭐ Client Reviews</h2>
-  <blockquote>"Kamil was great! He mounted multiple shelves and a heavy mirror with precision. He was super professional and efficient." – Jessica R.</blockquote>
-  <blockquote>"Very knowledgeable and skilled. Kamil assembled two complex wardrobes and even helped adjust my kitchen doors." – Daniel K.</blockquote>
-  <blockquote>"Punctual, polite and efficient! I will definitely book him again." – Sarah T.</blockquote>
-  <blockquote>"Mounted curtain rods and a TV. Everything is level and solid. Highly recommended!" – Ravi P.</blockquote>
-</div>
-
-    <div class="booking">
-      <h2>Book a Visit</h2>
-      <button onclick="window.location.href='tel:+12017237708'">Book Now</button>
+      <a href="#img1"><img src="https://i.imgur.com/eXMYxw5.jpeg" alt="Decorative wall paneling" /></a>
+      <a href="#img2"><img src="https://i.imgur.com/WhJIjz0.jpeg" alt="Kitchen cabinet installation" /></a>
+      <a href="#img3"><img src="https://i.imgur.com/BLtzhzH.jpeg" alt="Closet system built‑ins" /></a>
+      <a href="#img4"><img src="https://i.imgur.com/LwhHoBt.jpeg" alt="Interior doors" /></a>
+      <a href="#img5"><img src="https://i.imgur.com/xBBDZNk.jpeg" alt="TV mounting & media wall" /></a>
+      <a href="#img6"><img src="https://i.imgur.com/KCwEvFB.jpeg" alt="Trim & moldings" /></a>
+      <a href="#img7"><img src="https://i.imgur.com/s8fKG9O.jpeg" alt="Trim & moldings" /></a>
+      <a href="#img8"><img src="https://i.imgur.com/YeQIvKd.jpeg" alt="Trim & moldings" /></a>
+      <a href="#img9"><img src="https://i.imgur.com/11Z8rCT.jpeg" alt="Decorative wall paneling" /></a>
     </div>
   </div>
+</section>
 
+<div id="img1" class="lightbox">
+  <a href="#" class="close">×</a>
+  <a href="#img9" class="prev">‹</a>
+  <img src="https://i.imgur.com/eXMYxw5.jpeg" alt="Decorative wall paneling Large">
+  <a href="#img2" class="next">›</a>
+</div>
+<div id="img2" class="lightbox">
+  <a href="#" class="close">×</a>
+  <a href="#img1" class="prev">‹</a>
+  <img src="https://i.imgur.com/WhJIjz0.jpeg" alt="Kitchen cabinet installation Large">
+  <a href="#img3" class="next">›</a>
+</div>
+<div id="img3" class="lightbox">
+  <a href="#" class="close">×</a>
+  <a href="#img2" class="prev">‹</a>
+  <img src="https://i.imgur.com/BLtzhzH.jpeg" alt="Closet system built‑ins Large">
+  <a href="#img4" class="next">›</a>
+</div>
+<div id="img4" class="lightbox">
+  <a href="#" class="close">×</a>
+  <a href="#img3" class="prev">‹</a>
+  <img src="https://i.imgur.com/LwhHoBt.jpeg" alt="Interior doors Large">
+  <a href="#img5" class="next">›</a>
+</div>
+<div id="img5" class="lightbox">
+  <a href="#" class="close">×</a>
+  <a href="#img4" class="prev">‹</a>
+  <img src="https://i.imgur.com/xBBDZNk.jpeg" alt="TV mounting & media wall Large">
+  <a href="#img6" class="next">›</a>
+</div>
+<div id="img6" class="lightbox">
+  <a href="#" class="close">×</a>
+  <a href="#img5" class="prev">‹</a>
+  <img src="https://i.imgur.com/KCwEvFB.jpeg" alt="Trim & moldings Large">
+  <a href="#img7" class="next">›</a>
+</div>
+<div id="img7" class="lightbox">
+  <a href="#" class="close">×</a>
+  <a href="#img6" class="prev">‹</a>
+  <img src="https://i.imgur.com/s8fKG9O.jpeg" alt="Trim & moldings Large">
+  <a href="#img8" class="next">›</a>
+</div>
+<div id="img8" class="lightbox">
+  <a href="#" class="close">×</a>
+  <a href="#img7" class="prev">‹</a>
+  <img src="https://i.imgur.com/YeQIvKd.jpeg" alt="Trim & moldings Large">
+  <a href="#img9" class="next">›</a>
+</div>
+<div id="img9" class="lightbox">
+  <a href="#" class="close">×</a>
+  <a href="#img8" class="prev">‹</a>
+  <img src="https://i.imgur.com/11Z8rCT.jpeg" alt="Decorative wall paneling Large">
+  <a href="#img1" class="next">›</a>
+</div>
+
+<style>
+  .gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+  .gallery a{display:block;position:relative}
+  .gallery img{width:100%;height:auto;object-fit:contain;border-radius:12px;border:1px solid #e5e7eb;transition:transform .2s ease}
+  .gallery img:hover{transform:scale(1.03);cursor:pointer}
+
+  .lightbox{display:none;position:fixed;z-index:100;left:0;top:0;width:100%;height:100%;background:rgba(0,0,0,0.8);align-items:center;justify-content:center}
+  .lightbox img{max-width:90%;max-height:90%;border-radius:12px}
+  .lightbox:target{display:flex}
+
+  .lightbox .close{position:absolute;top:20px;right:30px;font-size:40px;color:#fff;text-decoration:none}
+  .lightbox .close:hover{color:#ff7f00}
+
+  .lightbox .prev, .lightbox .next{position:absolute;top:50%;transform:translateY(-50%);font-size:50px;color:#fff;text-decoration:none;padding:0 15px}
+  .lightbox .prev{left:20px}
+  .lightbox .next{right:20px}
+  .lightbox .prev:hover, .lightbox .next:hover{color:#ff7f00}
+</style>
+
+  <section id="why">
+    <div class="container">
+      <div class="cta-strip">
+        <h2 style="margin:0 0 8px">Ready to upgrade your space?</h2>
+        <p style="margin:0 0 14px">Send photos for a fast, free estimate. Residential & B2B.</p>
+        <div style="display:flex;gap:10px;justify-content:center;flex-wrap:wrap">
+          <a class="cta" href="tel:+12017237708">Call (201) 723‑7708</a>
+          <a class="cta" href="https://wa.me/12017237708" target="_blank" rel="noopener">WhatsApp</a>
+          <a class="cta" href="mailto:soloproservices@gmail.com">Email</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="container">
+      <h2>Contact</h2>
+      <div class="grid cols-2">
+        <div class="card">
+          <p><strong>Phone:</strong> <a href="tel:+12017237708">(201) 723‑7708</a></p>
+          <p><strong>Email:</strong> <a href="mailto:soloproservices@gmail.com">soloproservices@gmail.com</a></p>
+          <p><strong>Location:</strong> Fort Lee, NJ</p>
+          <p><strong>Hours:</strong> Mon–Fri 8:00–18:00 • Weekends by appointment</p>
+          <p style="color:var(--gray-500);margin-top:10px">Also available for general handyman tasks upon request.</p>
+        </div>
+        <div class="card">
+          <p style="margin:0 0 8px"><strong>Links</strong></p>
+          <ul class="list">
+            <li><a href="https://share.google/Fzl9VP8nP3DwLym19" target="_blank" rel="noopener">Google Business (reviews & photos)</a></li>
+            <li><a href="https://wa.me/12017237708" target="_blank" rel="noopener">Start WhatsApp chat</a></li>
+            <li><a href="#portfolio">See recent work</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div style="display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;align-items:center">
+        <div>© <span id="y"></span> Solo Pro Services • Licensed • Insured • W9 Provided</div>
+        <div style="color:var(--gray-500)">Site by Solo Pro Services</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- LocalBusiness schema for SEO -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Solo Pro Services",
+    "image": "",
+    "telephone": "+1-201-723-7708",
+    "email": "soloproservices@gmail.com",
+    "url": "https://soloproservices.com/",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Fort Lee",
+      "addressRegion": "NJ",
+      "addressCountry": "US"
+    },
+    "areaServed": ["Fort Lee NJ","Bergen County NJ","Edgewater NJ","Hackensack NJ"],
+    "sameAs": ["https://share.google/Fzl9VP8nP3DwLym19"],
+    "description": "Cabinetry, closets, interior doors, wall paneling, trim work, TV/media walls, furniture assembly, drywall repair, and small interior painting. Residential & B2B. Licensed • Insured • W9 Provided."
+  }
+  </script>
   <script>
-    document.getElementById("whatsappForm").addEventListener("submit", function(e) {
-      e.preventDefault();
-      const name = document.getElementById("name").value;
-      const email = document.getElementById("email").value;
-      const phone = document.getElementById("phone").value;
-      const message = document.getElementById("message").value;
-      const fullMessage = `New request from ${name}%0AEmail: ${email}%0APhone: ${phone}%0AProject: ${encodeURIComponent(message)}`;
-      const confirmation = document.getElementById("confirmation");
-      confirmation.style.display = "block";
-      setTimeout(() => { confirmation.style.display = "none"; }, 5000);
-      window.open(`https://wa.me/12017237708?text=${fullMessage}`, '_blank');
-    });
+    document.getElementById('y').textContent = new Date().getFullYear();
   </script>
 </body>
 </html>
-
