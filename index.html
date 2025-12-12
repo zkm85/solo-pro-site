@@ -3,11 +3,10 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <!-- изменил фразу в title под новую нишу -->
   <title>Solo Pro Services — Wall Design & Custom Installations in Fort Lee NJ</title>
-  <!-- переписал description: убрал cabinetry, мебель, добавил accent/media walls и storage -->
   <meta name="description" content="Solo Pro Services specializes in accent walls, media walls & TV installations, wall paneling, trim work, and closets & storage solutions in Fort Lee and Bergen County. Licensed & Insured • W9 Provided • Residential & B2B." />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
   <style>
     :root{
       --blue:#004A8F; /* brand blue */
@@ -68,27 +67,55 @@
     footer{border-top:1px solid var(--gray-200);padding:28px 0 40px;color:var(--gray-700)}
     footer a{color:var(--blue);text-decoration:none}
 
+    /* Reviews / Proof block (refreshed, no shadow, matches site) */
+    #proof h2{margin:0 0 12px}
+    .proof{
+      background:var(--card);
+      border:1px solid var(--gray-200);
+      border-radius:var(--radius);
+      padding:18px;
+    }
+    .proof-grid{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:16px;
+      margin-top:12px;
+    }
+    .proof h3{margin:0 0 10px;font-size:16px}
+    .quote{
+      background:#fff;
+      border:1px solid var(--gray-200);
+      border-radius:12px;
+      padding:14px 14px 14px 16px;
+      margin:0;
+    }
+    .quote p{margin:0;color:var(--gray-700)}
+    .quote p::before{content:"“";}
+    .quote p::after{content:"”";}
+    .quote .cap{margin:10px 0 0;font-size:13px;color:var(--gray-500)}
+    .proof a{color:var(--blue);text-decoration:none;font-weight:600}
+    .proof a:hover{text-decoration:underline}
+
     /* Responsive */
     @media (max-width:900px){
       .hero .wrap{grid-template-columns:1fr}
       .cols-3{grid-template-columns:1fr}
       .cols-2{grid-template-columns:1fr}
       .gallery{grid-template-columns:repeat(2,1fr)}
+      .proof-grid{grid-template-columns:1fr}
     }
     @media (max-width:560px){
-    h1{font-size:30px; padding:0 12px;}
-    .subtitle{padding:0 12px;}
-    .cta{margin:12px auto;
-      display:inline-block;
-      padding:8px 12px; 
-      font-size:14px;}
-    .badge{margin:6px; padding:10px 14px;} /* отступы для бейджей */
-    .gallery{grid-template-columns:1fr}
-    nav ul{display:none}
-    .logo img{height:28px; margin-left:10px;} /* уменьшение логотипа на 30% и отступ */
-  }
-</style>
+      h1{font-size:30px; padding:0 12px;}
+      .subtitle{padding:0 12px;}
+      .cta{margin:12px auto;display:inline-block;padding:8px 12px;font-size:14px;}
+      .badge{margin:6px; padding:10px 14px;}
+      .gallery{grid-template-columns:1fr}
+      nav ul{display:none}
+      .logo img{height:28px; margin-left:10px;}
+    }
+  </style>
 </head>
+
 <body>
   <header>
     <div class="container nav">
@@ -106,12 +133,11 @@
       <a class="cta" href="tel:+12017237708">Call (201) 723-7708</a>
     </div>
   </header>
+
   <section class="hero">
     <div class="container wrap">
       <div>
-        <!-- главный H1 переведён на wall design -->
         <h1>Wall Design & Custom Installations</h1>
-        <!-- подзаголовок фокусирует на стенах, медиа и storage -->
         <p class="subtitle">Accent walls & panels • Media walls • Closets & storage • Wall décor & TV installations</p>
         <div class="badges">
           <span class="badge">Licensed & Insured</span>
@@ -122,11 +148,12 @@
         <a class="cta" href="https://wa.me/12017237708" target="_blank" rel="noopener">Text on WhatsApp</a>
         <a class="cta" style="margin-left:10px;background:var(--blue)" href="#contact">Get a Free Estimate</a>
       </div>
+
       <div class="hero-card">
         <strong>Quick estimate?</strong>
-        <p style="margin:8px 0 12px;color:var(--gray-700)">We’ve got you covered.</h3>
-  <p>Send us photos and a short description for a free rough estimate.</p>
-  <p>When you’re ready to move forward, we’ll schedule a professional site visit for measurements and design. The consultation fee goes right back into your project.</p>
+        <p style="margin:8px 0 12px;color:var(--gray-700)">We’ve got you covered.</p>
+        <p>Send us photos and a short description for a free rough estimate.</p>
+        <p>When you’re ready to move forward, we’ll schedule a professional site visit for measurements and design. The consultation fee goes right back into your project.</p>
         <ul class="list">
           <li>Reply within 1 business day</li>
           <li>Clear, itemized pricing</li>
@@ -141,15 +168,14 @@
       <h2>Services</h2>
       <div class="grid cols-3">
         <div class="card">
-          <!-- карточка 1: Accent Walls & Panels -->
           <h3>Accent Walls & Panels</h3>
           <ul class="list">
             <li>Molding and panel accent walls</li>
             <li>Slat walls, geometric panels, feature walls</li>
           </ul>
         </div>
+
         <div class="card">
-          <!-- карточка 2: Closets & Storage Solutions, без слова cabinetry -->
           <h3>Closets & Storage Solutions</h3>
           <ul class="list">
             <li>Closet systems & built-ins</li>
@@ -157,8 +183,8 @@
             <li>Mudroom benches & custom shelves</li>
           </ul>
         </div>
+
         <div class="card">
-          <!-- карточка 3: Media Walls & TV Installations -->
           <h3>Media Walls & TV Installations</h3>
           <ul class="list">
             <li>TV mounting & media walls</li>
@@ -166,8 +192,8 @@
             <li>Floating shelves & simple built-ins</li>
           </ul>
         </div>
+
         <div class="card">
-          <!-- карточка 4: Picture Layouts & Wall Decor вместо Repairs & Painting -->
           <h3>Picture Layouts & Wall Decor</h3>
           <ul class="list">
             <li>Gallery wall planning & installation</li>
@@ -175,17 +201,18 @@
             <li>Projector-assisted layout visualization</li>
           </ul>
         </div>
+
         <div class="card">
           <h3>Service Area</h3>
           <ul class="list">
             <li>Fort Lee, NJ (base)</li>
             <li>Bergen County (Edgewater, Palisades Park, Hackensack, Teaneck, Englewood, Ridgefield, Cliffside Park, Leonia, etc.)</li>
-         </ul>
+          </ul>
         </div>
+
         <div class="card">
           <h3>Why choose us</h3>
           <ul class="list">
-            <!-- формулировка опыта переведена с cabinetry на finish carpentry & wall installations -->
             <li>12+ years in finish carpentry & wall installations</li>
             <li>Trusted by homeowners & small businesses</li>
             <li>Fast response & clear communication</li>
@@ -196,96 +223,160 @@
     </div>
   </section>
 
- <section id="portfolio">
-  <div class="container">
-    <h2>Recent Work</h2>
-    <div class="gallery">
-      <a href="#img1"><img src="https://i.imgur.com/eXMYxw5.jpeg" alt="Decorative wall paneling" /></a>
-      <a href="#img8"><img src="https://i.imgur.com/YeQIvKd.jpeg" alt="Trim & moldings" /></a>
-      <a href="#img3"><img src="https://i.imgur.com/7ngjGko.jpeg" alt="Media wall" /></a>
-      <a href="#img4"><img src="https://i.imgur.com/38dQ32l.jpeg" alt="Custom mudrrom" /></a>
-      <a href="#img5"><img src="https://i.imgur.com/s8fKG9O.jpeg" alt="Trim & moldings" /></a>
-      <a href="#img6"><img src="https://i.imgur.com/KCwEvFB.jpeg" alt="Trim & moldings" /></a>
-      <a href="#img7"><img src="https://i.imgur.com/6UhIcuU.jpeg" alt="Custom floating shelves" /></a>
-      <a href="#img8"><img src="https://i.imgur.com/WhJIjz0.jpeg" alt="Kitchen cabinet installation" /></a>
-      <a href="#img9"><img src="https://i.imgur.com/11Z8rCT.jpeg" alt="Decorative wall paneling" /></a>
+  <section id="portfolio">
+    <div class="container">
+      <h2>Recent Work</h2>
+      <div class="gallery">
+        <a href="#img1"><img src="https://i.imgur.com/eXMYxw5.jpeg" alt="Decorative wall paneling" /></a>
+        <a href="#img8"><img src="https://i.imgur.com/YeQIvKd.jpeg" alt="Trim & moldings" /></a>
+        <a href="#img3"><img src="https://i.imgur.com/7ngjGko.jpeg" alt="Media wall" /></a>
+        <a href="#img4"><img src="https://i.imgur.com/38dQ32l.jpeg" alt="Custom mudrrom" /></a>
+        <a href="#img5"><img src="https://i.imgur.com/s8fKG9O.jpeg" alt="Trim & moldings" /></a>
+        <a href="#img6"><img src="https://i.imgur.com/KCwEvFB.jpeg" alt="Trim & moldings" /></a>
+        <a href="#img7"><img src="https://i.imgur.com/6UhIcuU.jpeg" alt="Custom floating shelves" /></a>
+        <a href="#img8"><img src="https://i.imgur.com/WhJIjz0.jpeg" alt="Kitchen cabinet installation" /></a>
+        <a href="#img9"><img src="https://i.imgur.com/11Z8rCT.jpeg" alt="Decorative wall paneling" /></a>
+      </div>
     </div>
+  </section>
+
+  <!-- Lightbox -->
+  <div id="img1" class="lightbox">
+    <a href="#" class="close">×</a>
+    <a href="#img9" class="prev">‹</a>
+    <img src="https://i.imgur.com/eXMYxw5.jpeg" alt="Decorative wall paneling Large">
+    <a href="#img2" class="next">›</a>
   </div>
-</section>
+  <div id="img2" class="lightbox">
+    <a href="#" class="close">×</a>
+    <a href="#img1" class="prev">‹</a>
+    <img src="https://i.imgur.com/WhJIjz0.jpeg" alt="Kitchen cabinet installation Large">
+    <a href="#img3" class="next">›</a>
+  </div>
+  <div id="img3" class="lightbox">
+    <a href="#" class="close">×</a>
+    <a href="#img2" class="prev">‹</a>
+    <img src="https://i.imgur.com/7ngjGko.jpeg" alt="Media wall Large">
+    <a href="#img4" class="next">›</a>
+  </div>
+  <div id="img4" class="lightbox">
+    <a href="#" class="close">×</a>
+    <a href="#img3" class="prev">‹</a>
+    <img src="https://i.imgur.com/38dQ32l.jpeg" alt="Custom mudroom Large">
+    <a href="#img5" class="next">›</a>
+  </div>
+  <div id="img5" class="lightbox">
+    <a href="#" class="close">×</a>
+    <a href="#img4" class="prev">‹</a>
+    <img src="https://i.imgur.com/6UhIcuU.jpeg" alt="custom floating shelves Large">
+    <a href="#img6" class="next">›</a>
+  </div>
+  <div id="img6" class="lightbox">
+    <a href="#" class="close">×</a>
+    <a href="#img5" class="prev">‹</a>
+    <img src="https://i.imgur.com/KCwEvFB.jpeg" alt="Trim & moldings Large">
+    <a href="#img7" class="next">›</a>
+  </div>
+  <div id="img7" class="lightbox">
+    <a href="#" class="close">×</a>
+    <a href="#img6" class="prev">‹</a>
+    <img src="https://i.imgur.com/s8fKG9O.jpeg" alt="Trim & moldings Large">
+    <a href="#img8" class="next">›</a>
+  </div>
+  <div id="img8" class="lightbox">
+    <a href="#" class="close">×</a>
+    <a href="#img7" class="prev">‹</a>
+    <img src="https://i.imgur.com/YeQIvKd.jpeg" alt="Trim & moldings Large">
+    <a href="#img9" class="next">›</a>
+  </div>
+  <div id="img9" class="lightbox">
+    <a href="#" class="close">×</a>
+    <a href="#img8" class="prev">‹</a>
+    <img src="https://i.imgur.com/11Z8rCT.jpeg" alt="Decorative wall paneling Large">
+    <a href="#img1" class="next">›</a>
+  </div>
 
-<div id="img1" class="lightbox">
-  <a href="#" class="close">×</a>
-  <a href="#img9" class="prev">‹</a>
-  <img src="https://i.imgur.com/eXMYxw5.jpeg" alt="Decorative wall paneling Large">
-  <a href="#img2" class="next">›</a>
-</div>
-<div id="img2" class="lightbox">
-  <a href="#" class="close">×</a>
-  <a href="#img1" class="prev">‹</a>
-  <img src="https://i.imgur.com/WhJIjz0.jpeg" alt="Kitchen cabinet installation Large">
-  <a href="#img3" class="next">›</a>
-</div>
-<div id="img3" class="lightbox">
-  <a href="#" class="close">×</a>
-  <a href="#img2" class="prev">‹</a>
-  <img src="https://i.imgur.com/7ngjGko.jpeg" alt="Media wall Large">
-  <a href="#img4" class="next">›</a>
-</div>
-<div id="img4" class="lightbox">
-  <a href="#" class="close">×</a>
-  <a href="#img3" class="prev">‹</a>
-  <img src="https://i.imgur.com/38dQ32l.jpeg" alt="Custom mudroom Large">
-  <a href="#img5" class="next">›</a>
-</div>
-<div id="img5" class="lightbox">
-  <a href="#" class="close">×</a>
-  <a href="#img4" class="prev">‹</a>
-  <img src="https://i.imgur.com/6UhIcuU.jpeg" alt="custom floating shelves Large">
-  <a href="#img6" class="next">›</a>
-</div>
-<div id="img6" class="lightbox">
-  <a href="#" class="close">×</a>
-  <a href="#img5" class="prev">‹</a>
-  <img src="https://i.imgur.com/KCwEvFB.jpeg" alt="Trim & moldings Large">
-  <a href="#img7" class="next">›</a>
-</div>
-<div id="img7" class="lightbox">
-  <a href="#" class="close">×</a>
-  <a href="#img6" class="prev">‹</a>
-  <img src="https://i.imgur.com/s8fKG9O.jpeg" alt="Trim & moldings Large">
-  <a href="#img8" class="next">›</a>
-</div>
-<div id="img8" class="lightbox">
-  <a href="#" class="close">×</a>
-  <a href="#img7" class="prev">‹</a>
-  <img src="https://i.imgur.com/YeQIvKd.jpeg" alt="Trim & moldings Large">
-  <a href="#img9" class="next">›</a>
-</div>
-<div id="img9" class="lightbox">
-  <a href="#" class="close">×</a>
-  <a href="#img8" class="prev">‹</a>
-  <img src="https://i.imgur.com/11Z8rCT.jpeg" alt="Decorative wall paneling Large">
-  <a href="#img1" class="next">›</a>
-</div>
+  <style>
+    .gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+    .gallery a{display:block;position:relative}
+    .gallery img{width:100%;height:auto;object-fit:contain;border-radius:12px;border:1px solid #e5e7eb;transition:transform .2s ease}
+    .gallery img:hover{transform:scale(1.03);cursor:pointer}
 
-<style>
-  .gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
-  .gallery a{display:block;position:relative}
-  .gallery img{width:100%;height:auto;object-fit:contain;border-radius:12px;border:1px solid #e5e7eb;transition:transform .2s ease}
-  .gallery img:hover{transform:scale(1.03);cursor:pointer}
+    .lightbox{display:none;position:fixed;z-index:100;left:0;top:0;width:100%;height:100%;background:rgba(0,0,0,0.8);align-items:center;justify-content:center}
+    .lightbox img{max-width:90%;max-height:90%;border-radius:12px}
+    .lightbox:target{display:flex}
 
-  .lightbox{display:none;position:fixed;z-index:100;left:0;top:0;width:100%;height:100%;background:rgba(0,0,0,0.8);align-items:center;justify-content:center}
-  .lightbox img{max-width:90%;max-height:90%;border-radius:12px}
-  .lightbox:target{display:flex}
+    .lightbox .close{position:absolute;top:20px;right:30px;font-size:40px;color:#fff;text-decoration:none}
+    .lightbox .close:hover{color:#ff7f00}
 
-  .lightbox .close{position:absolute;top:20px;right:30px;font-size:40px;color:#fff;text-decoration:none}
-  .lightbox .close:hover{color:#ff7f00}
+    .lightbox .prev, .lightbox .next{position:absolute;top:50%;transform:translateY(-50%);font-size:50px;color:#fff;text-decoration:none;padding:0 15px}
+    .lightbox .prev{left:20px}
+    .lightbox .next{right:20px}
+    .lightbox .prev:hover, .lightbox .next:hover{color:#ff7f00}
+  </style>
 
-  .lightbox .prev, .lightbox .next{position:absolute;top:50%;transform:translateY(-50%);font-size:50px;color:#fff;text-decoration:none;padding:0 15px}
-  .lightbox .prev{left:20px}
-  .lightbox .next{right:20px}
-  .lightbox .prev:hover, .lightbox .next:hover{color:#ff7f00}
-</style>
+  <!-- Reviews / Proof section (MOVED HERE under portfolio) -->
+  <section id="proof">
+    <div class="container">
+      <div class="proof">
+        <h2>Why homeowners choose Solo Pro Services</h2>
+
+        <div class="proof-grid">
+          <div>
+            <h3>Clean, precise workmanship</h3>
+            <blockquote class="quote">
+              <p>We were blown away by the care, precision, and professionalism he puts into his work.</p>
+              <div class="cap">— Diane M., Google Review</div>
+            </blockquote>
+          </div>
+
+          <div>
+            <h3>Clear communication & fair pricing</h3>
+            <blockquote class="quote">
+              <p>Very fairly priced and the easiest person to communicate with from the start.</p>
+              <div class="cap">— Diane M., Google Review</div>
+            </blockquote>
+          </div>
+
+          <div>
+            <h3>Reliable and consistent</h3>
+            <blockquote class="quote">
+              <p>Always on time, very punctual.</p>
+              <div class="cap">— Google Review</div>
+            </blockquote>
+          </div>
+
+          <div>
+            <h3>Respectful, clean work in your home</h3>
+            <blockquote class="quote">
+              <p>Prompt, courteous, and kept everything neat throughout the project.</p>
+              <div class="cap">— Google Review</div>
+            </blockquote>
+          </div>
+
+          <div>
+            <h3>Design sense & good judgment</h3>
+            <blockquote class="quote">
+              <p>Comes with great design suggestions.</p>
+              <div class="cap">— Google Review</div>
+            </blockquote>
+          </div>
+
+          <div>
+            <h3>Trusted by repeat clients</h3>
+            <blockquote class="quote">
+              <p>I’d feel completely comfortable having him in my home even if I’m not there.</p>
+              <div class="cap">— Google Review</div>
+            </blockquote>
+          </div>
+        </div>
+
+        <p style="margin:16px 0 0;color:var(--gray-700)">
+          <a href="https://share.google/Fzl9VP8nP3DwLym19" target="_blank" rel="noopener">Read more reviews on Google</a>
+        </p>
+      </div>
+    </div>
+  </section>
 
   <section id="why">
     <div class="container">
@@ -310,7 +401,6 @@
           <p><strong>Email:</strong> <a href="mailto:soloproservices@gmail.com">soloproservices@gmail.com</a></p>
           <p><strong>Location:</strong> Fort Lee, NJ</p>
           <p><strong>Hours:</strong> Mon–Fri 8:00–18:00 • Weekends by appointment</p>
-          <!-- убрал упоминание general handyman, чтобы не тянуть не ту аудиторию -->
         </div>
         <div class="card">
           <p style="margin:0 0 8px"><strong>Links</strong></p>
@@ -351,13 +441,12 @@
     },
     "areaServed": ["Fort Lee NJ","Bergen County NJ","Edgewater NJ","Hackensack NJ"],
     "sameAs": ["https://share.google/Fzl9VP8nP3DwLym19"],
-    <!-- описание в schema.org тоже перевёл на стеновую нишу -->
     "description": "Accent walls & panels, media walls & TV installations, wall paneling, trim work, closets & storage solutions, and wall décor installations. Residential & B2B. Licensed • Insured • W9 Provided."
   }
   </script>
+
   <script>
     document.getElementById('y').textContent = new Date().getFullYear();
   </script>
 </body>
 </html>
-
