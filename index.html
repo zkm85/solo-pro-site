@@ -59,6 +59,47 @@
     .gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
     .gallery img{width:100%;height:300px;object-fit:cover;border-radius:12px;border:1px solid var(--gray-200)}
 
+    /* ===== Triptych process block (UPDATED) ===== */
+    #process{
+      padding-top:0;          /* keep tight under hero */
+      padding-bottom:24px;    /* a bit less than standard section */
+      margin-top:12px;        /* drop it down so it doesn't "stick" to hero */
+    }
+    .process-wrap{
+      background:var(--card); /* only gray background */
+      border:none;            /* remove borders */
+      border-radius:var(--radius);
+      overflow:hidden;
+    }
+    .process-head{
+      padding:14px 16px 0 16px; /* subtle top padding, no separators */
+      background:transparent;
+    }
+    .process-title{
+      margin:0;
+      font-size:18px;         /* match badge/body scale */
+      font-weight:400;        /* not bold */
+      color:var(--gray-700);
+      text-align:center;
+      line-height:1.4;
+    }
+    .process-media{padding:12px 12px 0 12px;} /* soft spacing around image */
+    .process-media img{
+      width:100%;
+      height:auto;
+      display:block;
+      border-radius:12px;
+      border:none;            /* no extra lines */
+    }
+    .process-caption{
+      padding:10px 16px 14px 16px;
+      color:var(--gray-700);
+      font-size:16px;
+      font-weight:400;
+      text-align:center;
+      background:transparent; /* same gray background shows through */
+    }
+
     /* CTA strip */
     .cta-strip{background:var(--blue);color:#fff;padding:28px 0;text-align:center;border-radius:12px}
     .cta-strip .cta{background:#fff;color:var(--blue)}
@@ -67,7 +108,7 @@
     footer{border-top:1px solid var(--gray-200);padding:28px 0 40px;color:var(--gray-700)}
     footer a{color:var(--blue);text-decoration:none}
 
-    /* Reviews / Proof block (refreshed, no shadow, matches site) */
+    /* Reviews / Proof block */
     #proof h2{margin:0 0 12px}
     .proof{
       background:var(--card);
@@ -103,6 +144,8 @@
       .cols-2{grid-template-columns:1fr}
       .gallery{grid-template-columns:repeat(2,1fr)}
       .proof-grid{grid-template-columns:1fr}
+      #process{margin-top:10px;}
+      .process-media{padding:10px 10px 0 10px;}
     }
     @media (max-width:560px){
       h1{font-size:30px; padding:0 12px;}
@@ -162,6 +205,31 @@
       </div>
     </div>
   </section>
+
+  <!-- ===== Triptych Process block (INSERTED HERE) ===== -->
+  <section id="process">
+    <div class="container">
+      <div class="process-wrap">
+        <div class="process-head">
+          <p class="process-title">Designed on screen. Aligned on site. Built to match.</p>
+        </div>
+
+        <div class="process-media">
+          <picture>
+            <!-- Mobile -->
+            <source media="(max-width: 900px)" srcset="https://i.imgur.com/qsWJVLQ.jpeg">
+            <!-- Desktop fallback -->
+            <img
+              src="https://i.imgur.com/DdGogNh.jpeg"
+              alt="Custom media wall process: existing conditions, on-site projection layout, and built result">
+          </picture>
+        </div>
+
+        <div class="process-caption">Custom Media Wall — On-Site Projection Layout Process.</div>
+      </div>
+    </div>
+  </section>
+  <!-- ===== /Triptych Process block ===== -->
 
   <section id="services">
     <div class="container">
@@ -315,7 +383,7 @@
     .lightbox .prev:hover, .lightbox .next:hover{color:#ff7f00}
   </style>
 
-  <!-- Reviews / Proof section (MOVED HERE under portfolio) -->
+  <!-- Reviews / Proof section -->
   <section id="proof">
     <div class="container">
       <div class="proof">
